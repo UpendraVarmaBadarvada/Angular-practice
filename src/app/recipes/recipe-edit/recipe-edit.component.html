@@ -54,10 +54,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12" formArrayName="ingredients">
+        <div class="col-xs-12" formArrayName="reviews">
           <div
             class="row"
-            *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index"
+            *ngFor="let reviewCtrl of recipeForm.get('reviews').controls; let i = index"
             [formGroupName]="i"
             style="margin-top: 10px;">
             <div class="col-xs-8">
@@ -76,7 +76,7 @@
               <button
                 type="button"
                 class="btn btn-danger"
-                (click)="onDeleteIngredient(i)">X</button>
+                (click)="onDeleteReview(i)">X</button>
             </div>
           </div>
           <hr>
@@ -85,7 +85,7 @@
               <button
                 type="button"
                 class="btn btn-success"
-                (click)="onAddIngredient()">Add Rating</button>
+                (click)="onAddReview()">Add Rating</button>
             </div>
           </div>
         </div>
